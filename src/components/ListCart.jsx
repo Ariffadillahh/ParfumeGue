@@ -1,12 +1,16 @@
 import React from "react";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 
-function ListCart({ parfume, setCartItems, cartItems }) {
+function ListCart({ parfume, setCartItems, cartItems, qty }) {
   const deleteCart = (id) => {
-    const updatedCart = cartItems.filter((item) => item !== id.toString());
+    const updatedCart = cartItems.filter(
+      (item) => item.id !== id
+    );
     localStorage.setItem("keranjang", JSON.stringify(updatedCart));
     setCartItems(updatedCart);
   };
+
+  const totalPrice = parfume.price * qty;
 
   return (
     <>
@@ -24,10 +28,12 @@ function ListCart({ parfume, setCartItems, cartItems }) {
                   {parfume.name}
                 </h2>
                 <p className="mt-1 text-xs text-gray-700">{parfume.brand}</p>
+                <p className="mt-1 text-xs text-gray-700">${parfume.price}</p>
+                <p className="mt-1 text-xs text-gray-700">{qty}x</p>
               </div>
               <div className="mt-4 flex ">
                 <div className="flex items-center">
-                  <p className="text-sm">${parfume.price}</p>
+                  <p className="text-sm">${totalPrice} </p>
                   <button
                     onClick={() => deleteCart(parfume.id)}
                     className="text-2xl text-red-600 cursor-pointer"

@@ -8,7 +8,6 @@ const Ratings = ({ review }) => {
         <p className="">
           No reviews available for this product yet.
         </p>
-      
       </div>
     );
   }

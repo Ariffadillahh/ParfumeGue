@@ -42,15 +42,17 @@ const ModalPembayaran = ({ totalPrice, openModal, setOpenModal }) => {
                 />
               </div>
               <p className="text-base leading-relaxed text-gray-500 text-center">
-                Silahkan Anda membayar dengan nominal{" "}
-                <span className="font-bold text-black">Rp {totalPrice}</span>{" "}
-                dan scan melalui barcode di atas. Ada Kendala dengan pembayaran?{" "}
+                Silakan lakukan pembayaran sejumlah
+                <span className="font-bold text-black mx-1">${totalPrice}</span>
+                dengan memindai barcode di atas. Setelah itu, unggah bukti
+                pembayaran Anda. Jika mengalami kendala dalam proses pembayaran,
                 <a
                   href="https://wa.me/+6281293772795"
-                  className="underline text-blue-700"
+                  className="underline text-blue-700 mx-1"
                 >
-                  Klik di sini
+                  klik di sini
                 </a>
+                untuk menghubungi kami melalui WhatsApp.
               </p>
             </div>
           </div>

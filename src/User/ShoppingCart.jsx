@@ -9,10 +9,11 @@ const ShoppingCart = () => {
   const [cartItems, setCartItems] = useState(
     JSON.parse(localStorage.getItem("keranjang")) || []
   );
+  console.log("🚀 ~ cartItems:", cartItems);
 
-  const totalPrice = cartItems.reduce((total, id) => {
-    const parfumes = data.find((parfume) => parfume.id === parseInt(id));
-    return parfumes ? total + parfumes.price : total;
+  const totalPrice = cartItems.reduce((total, item) => {
+    const parfum = data.find((parfume) => parfume.id === item.id);
+    return parfum ? total + parfum.price * item.qty : total;
   }, 0);
 
   useEffect(() => {
@@ -30,14 +31,14 @@ const ShoppingCart = () => {
             <h1 className="mb-4 text-2xl font-bold lg:mx-5">Shopping Cart</h1>
             <div className="w-full justify-center md:flex lg:px-5 gap-5">
               <div className="lg:w-full grid grid-cols-2 gap-4 md:block">
-                {cartItems.map((id, index) => {
-                  const parfumes = data.find(
-                    (parfume) => parfume.id === parseInt(id)
-                  );
+                {cartItems.map((item, index) => {
+                  const parfum = data.find((parfume) => parfume.id === item.id);
+                  if (!parfum) return null; 
                   return (
                     <ListCart
                       key={index}
-                      parfume={parfumes}
+                      parfume={parfum}
+                      qty={item.qty}
                       setCartItems={setCartItems}
                       cartItems={cartItems}
                     />
@@ -56,7 +57,9 @@ const ShoppingCart = () => {
           <>
             <div className="flex items-center justify-center h-[70vh]">
               <p className="font-semibold text-xl text-gray-800 italic">
-                <span><IoIosCart size={50} className="mx-auto animate-bounce" /></span>
+                <span>
+                  <IoIosCart size={50} className="mx-auto animate-bounce" />
+                </span>
                 Chart Kosong
               </p>
             </div>

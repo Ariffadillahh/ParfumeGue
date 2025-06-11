@@ -64,7 +64,7 @@ const FormCheckOut = ({ totalPrice, product }) => {
   }, [isModalOpen]);
 
   return (
-    <div className="w-full md:w-1/2 md:sticky top-0 h-full md:mt-0">
+    <div className="w-full md:w-1/2 md:sticky top-10 h-full md:mt-0">
       <div className="mt-6 h-full  bg-white md:mt-0 w-full">
         <form onSubmit={formik.handleSubmit} className="my-3 shadow-md rounded-lg p-4"> 
           <div>
