@@ -5,9 +5,9 @@ import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router";
-import Img1 from "../assets/chanel5.png";
-import Img2 from "../assets/ysl.webp";
-import Img3 from "../assets/gucci.png";
+import Img1 from "../assets/parfumes/chanel5.png";
+import Img2 from "../assets/parfumes/ysl.webp";
+import Img3 from "../assets/parfumes/gucci.png";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 const Swiper = () => {

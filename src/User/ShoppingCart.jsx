@@ -9,7 +9,6 @@ const ShoppingCart = () => {
   const [cartItems, setCartItems] = useState(
     JSON.parse(localStorage.getItem("keranjang")) || []
   );
-  console.log("🚀 ~ cartItems:", cartItems);
 
   const totalPrice = cartItems.reduce((total, item) => {
     const parfum = data.find((parfume) => parfume.id === item.id);

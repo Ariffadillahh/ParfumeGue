@@ -29,7 +29,6 @@ const DetailParfume = () => {
     setQty((prevQty) => (prevQty > 1 ? prevQty - 1 : 1));
   };
 
-  console.log("🚀 ~ addKeranjang ~ keranjang:", keranjang)
   const addKeranjang = (id) => {
     const updatedKeranjang = [...keranjang];
     const existingItem = updatedKeranjang.find((item) => item.id === id);
@@ -70,7 +69,7 @@ const DetailParfume = () => {
         <div className="md:grid md:grid-cols-2">
           <div className="md:w-1/2 w-full  mx-auto p-4 ">
             <img
-              src="https://m.media-amazon.com/images/I/61bG3pY7k-L.jpg"
+              src={parfume.image}
               alt={parfume.name}
             />
           </div>

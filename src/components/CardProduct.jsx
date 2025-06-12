@@ -5,7 +5,7 @@ const CardProduct = ({ parfume }) => {
   return (
     <Link
       to={`/detail/${parfume.id}`}
-      className="block p-4 hover:shadow-lg transition-shadow duration-300 border border-gray-500/20 rounded-lg "
+      className="block p-4 hover:shadow-lg transition-shadow duration-300 border border-gray-500/30 rounded-lg "
     >
       <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-6 lg:space-x-8 relative ">
         {!parfume.inStock && (
@@ -13,13 +13,14 @@ const CardProduct = ({ parfume }) => {
             OUT OF STOCK
           </div>
         )}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center justify-center w-full">
           <div className="relative group">
             <div className=" w-full overflow-hidden  rounded-md ">
               <img
-                src="https://m.media-amazon.com/images/I/61bG3pY7k-L.jpg"
+                src={parfume.image}
                 alt={parfume.name}
-                className=" w-1/2 object-cover flex mx-auto object-center transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                className=" md:w-1/2 md:min-h-64 object-cover flex mx-auto object-center transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="mt-4">

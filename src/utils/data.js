@@ -1,9 +1,30 @@
+import Chanel from "../assets/parfumes/chanel5.png"
+import gucci from "../assets/parfumes/gucci.png"
+import ysl from "../assets/parfumes/ysl.webp"
+import dior from "../assets/parfumes/dior.webp"
+import CreedAventus from "../assets/parfumes/CreedAventus.png"
+import Tom from "../assets/parfumes/Tom.png"
+import eros from "../assets/parfumes/eros.png"
+import Paco from "../assets/parfumes/Paco.png"
+import Armani from "../assets/parfumes/armani.png"
+import lacome from "../assets/parfumes/lacome.png"
+import dolce from "../assets/parfumes/dolce.png"
+import Viktor from "../assets/parfumes/Viktor.png"
+import ck from "../assets/parfumes/ck.png"
+import hermes from "../assets/parfumes/hermes.png"
+import Montblanc from "../assets/parfumes/Montblanc.png"
+import burberry from "../assets/parfumes/burbery.png"
+import jo from "../assets/parfumes/jo.png"
+import Bvlgari from "../assets/parfumes/Bvlgari.png"
+import Givenchy from "../assets/parfumes/Givenchy.png"
+import baccarat from "../assets/parfumes/baccarat.png"
+
 export const perfumes = [
   {
     id: 1,
     name: "Chanel No. 5",
     brand: "Chanel",
-    image: "https://example.com/chanel-no-5.jpg",
+    image: Chanel,
     price: 250,
     fragranceLevel: 4,
     inStock: true,
@@ -15,7 +36,7 @@ export const perfumes = [
     id: 2,
     name: "Dior Sauvage",
     brand: "Dior",
-    image: "https://example.com/dior-sauvage.jpg",
+    image: dior,
     price: 200,
     fragranceLevel: 3,
     inStock: true,
@@ -26,7 +47,7 @@ export const perfumes = [
     id: 3,
     name: "Creed Aventus",
     brand: "Creed",
-    image: "https://example.com/creed-aventus.jpg",
+    image: CreedAventus,
     price: 450,
     fragranceLevel: 4,
     inStock: true,
@@ -37,7 +58,7 @@ export const perfumes = [
     id: 4,
     name: "Tom Ford Black Orchid",
     brand: "Tom Ford",
-    image: "https://example.com/tom-ford-black-orchid.jpg",
+    image: Tom,
     price: 300,
     fragranceLevel: 4,
     inStock: true,
@@ -48,7 +69,7 @@ export const perfumes = [
     id: 5,
     name: "Gucci Bloom",
     brand: "Gucci",
-    image: "https://example.com/gucci-bloom.jpg",
+    image: gucci,
     price: 180,
     fragranceLevel: 2,
     inStock: true,
@@ -59,7 +80,7 @@ export const perfumes = [
     id: 6,
     name: "Yves Saint Laurent Libre",
     brand: "YSL",
-    image: "https://example.com/ysl-libre.jpg",
+    image: ysl,
     price: 220,
     fragranceLevel: 3,
     inStock: true,
@@ -71,7 +92,7 @@ export const perfumes = [
     id: 7,
     name: "Versace Eros",
     brand: "Versace",
-    image: "https://example.com/versace-eros.jpg",
+    image: eros,
     price: 120,
     fragranceLevel: 3,
     inStock: true,
@@ -82,7 +103,7 @@ export const perfumes = [
     id: 8,
     name: "Paco Rabanne 1 Million",
     brand: "Paco Rabanne",
-    image: "https://example.com/paco-rabanne-1-million.jpg",
+    image: Paco,
     price: 150,
     fragranceLevel: 3,
     inStock: true,
@@ -93,7 +114,7 @@ export const perfumes = [
     id: 9,
     name: "Armani Code",
     brand: "Giorgio Armani",
-    image: "https://example.com/armani-code.jpg",
+    image: Armani,
     price: 190,
     fragranceLevel: 3,
     inStock: true,
@@ -104,7 +125,7 @@ export const perfumes = [
     id: 10,
     name: "Lancome La Vie Est Belle",
     brand: "Lancome",
-    image: "https://example.com/lancome-la-vie-est-belle.jpg",
+    image: lacome,
     price: 210,
     fragranceLevel: 4,
     inStock: true,
@@ -115,7 +136,7 @@ export const perfumes = [
     id: 11,
     name: "Dolce & Gabbana Light Blue",
     brand: "Dolce & Gabbana",
-    image: "https://example.com/dg-light-blue.jpg",
+    image: dolce,
     price: 150,
     fragranceLevel: 2,
     inStock: true,
@@ -126,7 +147,7 @@ export const perfumes = [
     id: 12,
     name: "Victor & Rolf Flowerbomb",
     brand: "Victor & Rolf",
-    image: "https://example.com/victor-rolf-flowerbomb.jpg",
+    image: Viktor,
     price: 260,
     fragranceLevel: 4,
     inStock: true,
@@ -137,7 +158,7 @@ export const perfumes = [
     id: 13,
     name: "Calvin Klein Euphoria",
     brand: "Calvin Klein",
-    image: "https://example.com/ck-euphoria.jpg",
+    image: ck,
     price: 130,
     fragranceLevel: 2,
     inStock: true,
@@ -148,7 +169,7 @@ export const perfumes = [
     id: 14,
     name: "Hermès Terre d'Hermès",
     brand: "Hermès",
-    image: "https://example.com/hermes-terre.jpg",
+    image: hermes,
     price: 240,
     fragranceLevel: 3,
     inStock: true,
@@ -160,7 +181,7 @@ export const perfumes = [
     id: 15,
     name: "Montblanc Explorer",
     brand: "Montblanc",
-    image: "https://example.com/montblanc-explorer.jpg",
+    image: Montblanc,
     price: 170,
     fragranceLevel: 2,
     inStock: true,
@@ -171,7 +192,7 @@ export const perfumes = [
     id: 16,
     name: "Burberry Her",
     brand: "Burberry",
-    image: "https://example.com/burberry-her.jpg",
+    image: burberry,
     price: 140,
     fragranceLevel: 2,
     inStock: true,
@@ -183,7 +204,7 @@ export const perfumes = [
     id: 17,
     name: "Jo Malone English Pear & Freesia",
     brand: "Jo Malone",
-    image: "https://example.com/jo-malone-english-pear.jpg",
+    image: jo,
     price: 170,
     fragranceLevel: 2,
     inStock: false,
@@ -194,7 +215,7 @@ export const perfumes = [
     id: 18,
     name: "Bvlgari Man in Black",
     brand: "Bvlgari",
-    image: "https://example.com/bvlgari-man-in-black.jpg",
+    image: Bvlgari,
     price: 220,
     fragranceLevel: 3,
     inStock: false,
@@ -205,7 +226,7 @@ export const perfumes = [
     id: 19,
     name: "Givenchy L'Interdit",
     brand: "Givenchy",
-    image: "https://example.com/givenchy-linterdit.jpg",
+    image: Givenchy,
     price: 180,
     fragranceLevel: 3,
     inStock: false,
@@ -216,8 +237,8 @@ export const perfumes = [
     id: 20,
     name: "Maison Francis Baccarat Rouge 540",
     brand: "Maison Francis Kurkdjian",
-    image: "https://example.com/mfk-baccarat-rouge.jpg",
-    price: 0,
+    image: baccarat,
+    price: 300,
     fragranceLevel: 4,
     inStock: false,
     description: "An exquisite blend of floral, amber, and woody notes.",

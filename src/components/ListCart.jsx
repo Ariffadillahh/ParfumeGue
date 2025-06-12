@@ -18,8 +18,8 @@ function ListCart({ parfume, setCartItems, cartItems, qty }) {
         <div className="rounded-lg md:w-full ">
           <div className="justify-between  mb-6 rounded-lg bg-white p-6 shadow-md md:flex md:justify-start">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gYOl79qIkcS_Fv8JZy6S0eWCIp-JUUjlOw&s"
-              alt="product-image"
+              src={parfume.image}
+              alt={parfume.name}
               className="w-full rounded-lg sm:w-40"
             />
             <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">

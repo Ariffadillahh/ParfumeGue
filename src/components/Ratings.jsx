@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 const Ratings = ({ review }) => {
   if (!review || !review.reviews || review.reviews.length === 0) {
     return (
-      <div className="italic text-gray-500 text-center">
+      <div className="italic text-gray-500 text-center flex h-[40vh] items-center justify-center">
         <p className="">
           No reviews available for this product yet.
         </p>
