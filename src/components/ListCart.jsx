@@ -1,11 +1,45 @@
 import React from "react";
-import { MdOutlineDeleteOutline } from "react-icons/md";
+import {
+  BiHeartCircle,
+  BiMinusCircle,
+  BiSolidPlusCircle,
+  BiTrash,
+} from "react-icons/bi";
+import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
 
 function ListCart({ parfume, setCartItems, cartItems, qty }) {
   const deleteCart = (id) => {
-    const updatedCart = cartItems.filter(
-      (item) => item.id !== id
-    );
+    const updatedCart = cartItems.filter((item) => item.id !== id);
+    localStorage.setItem("keranjang", JSON.stringify(updatedCart));
+    setCartItems(updatedCart);
+  };
+
+  const decrementQty = (id) => {
+    const updatedCart = cartItems.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          qty: Math.max(item.qty - 1, 1),
+        };
+      }
+      return item;
+    });
+
+    localStorage.setItem("keranjang", JSON.stringify(updatedCart));
+    setCartItems(updatedCart);
+  };
+
+  const incrementQty = (id) => {
+    const updatedCart = cartItems.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          qty: Math.max(item.qty + 1),
+        };
+      }
+      return item;
+    });
+
     localStorage.setItem("keranjang", JSON.stringify(updatedCart));
     setCartItems(updatedCart);
   };
@@ -15,32 +49,50 @@ function ListCart({ parfume, setCartItems, cartItems, qty }) {
   return (
     <>
       {parfume ? (
-        <div className="rounded-lg md:w-full ">
-          <div className="justify-between  mb-6 rounded-lg bg-white p-6 shadow-md md:flex md:justify-start">
-            <img
-              src={parfume.image}
-              alt={parfume.name}
-              className="w-full rounded-lg sm:w-40"
-            />
-            <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-              <div className="mt-5 sm:mt-0">
-                <h2 className="text-lg font-bold text-gray-900">
-                  {parfume.name}
-                </h2>
-                <p className="mt-1 text-xs text-gray-700">{parfume.brand}</p>
-                <p className="mt-1 text-xs text-gray-700">${parfume.price}</p>
-                <p className="mt-1 text-xs text-gray-700">{qty}x</p>
+        <div className="md:flex md:items-center gap-4 p-4 border-b w-full">
+          <img
+            src={parfume.image}
+            alt={parfume.name}
+            className="w-32 h-32 object-cover rounded-md mx-auto"
+          />
+          <div className="w-full">
+            <div className="md:flex-1 text-center md:text-left">
+              <h2 className="text-lg font-bold text-gray-900">
+                {parfume.name}
+              </h2>
+              <p className="text-sm text-gray-600">Brand: {parfume.brand}</p>
+            </div>
+            <div className="my-4 flex justify-center md:block">
+              <button
+                onClick={() => deleteCart(parfume.id)}
+                className="text-gray-500 hover:text-gray-700 cursor-pointer"
+              >
+                <BiTrash className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+
+          <div className="md:flex md:justify-end ">
+            <div>
+              <div className="md:text-right ">
+                <p className="text-xl font-bold text-gray-900 tracking-wide text-center">
+                  ${totalPrice}
+                </p>
               </div>
-              <div className="mt-4 flex ">
-                <div className="flex items-center">
-                  <p className="text-sm">${totalPrice} </p>
-                  <button
-                    onClick={() => deleteCart(parfume.id)}
-                    className="text-2xl text-red-600 cursor-pointer"
-                  >
-                    <MdOutlineDeleteOutline />
-                  </button>
-                </div>
+              <div className="flex items-center gap-2 mt-2 justify-center">
+                <button
+                  onClick={() => decrementQty(parfume.id)}
+                  className="p-1 cursor-pointer"
+                >
+                  <FiMinusCircle className="w-4" />
+                </button>
+                <p className="text-lg font-medium text-gray-900">{qty}</p>
+                <button
+                  onClick={() => incrementQty(parfume.id)}
+                  className="p-1 cursor-pointer"
+                >
+                  <FiPlusCircle className="w-4" />
+                </button>
               </div>
             </div>
           </div>

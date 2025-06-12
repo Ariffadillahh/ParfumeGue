@@ -144,7 +144,7 @@ const DetailParfume = () => {
             )}
           </div>
         </div>
-        <div className="my-5 mx-5">
+        <div className="my-10 mx-5">
           <Ratings review={review} />
         </div>
       </div>
