@@ -22,15 +22,26 @@
 - **[React.js](https://reactjs.org/)**: Library JavaScript untuk membangun antarmuka pengguna.
 - **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utility-first untuk pengembangan desain yang fleksibel.
 - **[React Router](https://reactrouter.com/)**: Untuk navigasi antar halaman.
+- **[Swiper.js](https://swiperjs.com/)**: Library untuk membuat slider atau carousel yang responsif dan modern.
+- **[React Icons](https://react-icons.github.io/react-icons/)**: Kumpulan ikon berbasis React yang dapat digunakan untuk mempercantik antarmuka.
+- **[Formik](https://formik.org/)**: Library untuk mengelola form di React secara efisien.
+- **[Yup](https://github.com/jquense/yup)**: Library untuk validasi schema, biasanya digunakan bersama Formik.
+- ** Dan Lain-Lain
+
 
 
 ---
 
 ## 📦 Instalasi dan Penggunaan
 
-### 1. Clone Repository
+### Clone Repository
 Clone repositori ke lokal Anda:
-```bash
-git clone https://github.com/[username]/parfumegue.git
-cd parfumegue
+
+  - `git clone https://github.com/Ariffadillahh/ParfumeGue.git`
+   - `cd parfumegue`
+   - `npm install`
+   - `npm run dev`
+
+## ✨ Terima Kasih!
+Website ParfumeGue ini dibuat untuk memenuhi tugas CSC dan diharapkan dapat menjadi inspirasi dalam pengembangan aplikasi web modern. Happy coding!
 
