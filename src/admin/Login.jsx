@@ -60,7 +60,7 @@ function Login() {
       <section className="">
         <div className="lg:flex lg:justify-between items-center px-6 mx-auto md:h-screen lg:py-0">
           <div className="flex justify-center ">
-            <img src={LoginImage} alt="Images" className="md:w-1/2 w-full" />
+            <img src={LoginImage} alt="Images" className="w-1/2 " />
           </div>
           <div className="w-full  bg-white  rounded-lg shadow mr-10 md:mt-0 xl:p-0">
             <div className="p-10 mt-3 space-y-4 md:space-y-6 sm:p-8">

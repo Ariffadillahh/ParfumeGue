@@ -7,7 +7,9 @@ import DetailParfume from "./User/DetailParfume";
 import Collections from "./User/Collections";
 import NotFoundPage from "./User/NotFoundPage";
 import DetailOrder from "./admin/DetailOrder";
+import FinishedOrders from "./admin/FinishedOrders";
 import ContactUs from "./User/ContactUs";
+import AllProducts from "./admin/AllProducts";
 
 function App() {
   return (
@@ -17,9 +19,11 @@ function App() {
       <Route path="/cart" element={<ShoppingCart />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/FinishedOrders" element={<FinishedOrders />} />
       <Route path="/collections" element={<Collections />} />
       <Route path="/dashboard/Order-detail/:id" element={<DetailOrder />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/allproducts" element={<AllProducts />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

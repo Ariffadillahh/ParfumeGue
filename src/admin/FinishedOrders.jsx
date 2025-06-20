@@ -28,20 +28,20 @@ const Dashboard = () => {
     }
   }, [token]);
 
-  const newOrders = Orders.filter((order) => order.status === "dikemas");
+  const newOrders = Orders.filter((order) => order.status !== "dikemas");
 
   return (
     <LayoutAdmin>
-      <Breadcrumb />
       <div>
+        <Breadcrumb title={"Finished Orders"} />
         {Orders.length === 0 ? (
           <div className="flex justify-center items-center h-screen">
-            <h1 className="text-2xl font-bold">No Orders</h1>
+            <h1 className="text-2xl font-bold">No Finished Orders</h1>
           </div>
         ) : (
           <div className="p-4">
             <div className="relative overflow-x-auto md:mx-10">
-              <h1 className="text-2xl font-bold my-4">New Orders</h1>
+              <h1 className="text-2xl font-bold my-4">Finished Orders</h1>
               <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
                   <tr>

@@ -19,6 +19,7 @@ const FormCheckOut = ({ totalPrice, product }) => {
       address: formik.values.address,
       totalPrice,
       product,
+      status : "dikemas"
     };
 
     const existingOrders = JSON.parse(localStorage.getItem("Orders")) || [];
