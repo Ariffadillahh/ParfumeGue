@@ -67,10 +67,11 @@ const DetailParfume = () => {
       <Toaster position="top-right" reverseOrder={false} />
       <div className="container mx-auto mt-10">
         <div className="md:grid md:grid-cols-2">
-          <div className="md:w-1/2 w-full  mx-auto p-4 ">
+          <div className="md:w-1/2  mx-auto flex justify-center">
             <img
               src={parfume.image}
               alt={parfume.name}
+              className="w-3/4 md:w-full"
             />
           </div>
           <div className="flex flex-col justify-center  px-5">
