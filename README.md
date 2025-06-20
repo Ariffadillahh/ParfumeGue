@@ -1,12 +1,36 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ParfumeGue - Website Toko Parfum
 
-Currently, two official plugins are available:
+**ParfumeGue** adalah sebuah website toko parfum yang dirancang untuk memberikan pengalaman belanja online yang mudah, cepat, dan responsif. Proyek ini dibuat oleh **Arif Fadillah Wicaksono** sebagai bagian dari tugas **Computer Student Club (CSC)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🎯 Fitur Utama
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Beranda Menarik**: Desain halaman utama yang modern dan responsif.
+- **Daftar Produk**: Menampilkan parfum lengkap dengan detail seperti nama, harga, dan deskripsi.
+- **Filter dan Pencarian Produk**: Memudahkan pengguna menemukan parfum favorit mereka.
+- **Keranjang Belanja**: Memungkinkan pelanggan menambahkan parfum ke keranjang untuk checkout.
+- **Halaman Checkout**: Menyediakan pengalaman pembayaran yang sederhana dan efisien.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- **[Vite](https://vitejs.dev/)**: Build tool yang cepat untuk pengembangan frontend.
+- **[React.js](https://reactjs.org/)**: Library JavaScript untuk membangun antarmuka pengguna.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utility-first untuk pengembangan desain yang fleksibel.
+- **[React Router](https://reactrouter.com/)**: Untuk navigasi antar halaman.
+
+
+---
+
+## 📦 Instalasi dan Penggunaan
+
+### 1. Clone Repository
+Clone repositori ke lokal Anda:
+```bash
+git clone https://github.com/[username]/parfumegue.git
+cd parfumegue
+
