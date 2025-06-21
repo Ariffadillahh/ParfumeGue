@@ -3,6 +3,7 @@ import { BsClipboardData } from "react-icons/bs";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoMdLogOut } from "react-icons/io";
 import { IoBagHandleSharp } from "react-icons/io5";
+import { LuMessageSquareText } from "react-icons/lu";
 import { MdDashboard } from "react-icons/md";
 import { Link } from "react-router";
 
@@ -55,6 +56,15 @@ const Sidebar = () => {
               >
                 <BsClipboardData size={25} />
                 <span className="ms-3">All Products</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/usermessage"}
+                className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <LuMessageSquareText size={25} />
+                <span className="ms-3">Message User</span>
               </Link>
             </li>
             <li>

@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import UserLayout from "./UserLayout";
 import { MdAddIcCall } from "react-icons/md";
 import { FaMailBulk } from "react-icons/fa";
 import { GrLocationPin } from "react-icons/gr";
+import toast, { Toaster } from "react-hot-toast";
 
 const ContactUs = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newMessage = { name, email, phone, description };
+
+    const storedMessages =
+      JSON.parse(localStorage.getItem("contactMessages")) || [];
+
+    const updatedMessages = [...storedMessages, newMessage];
+
+    localStorage.setItem("contactMessages", JSON.stringify(updatedMessages));
+
+    setName("");
+    setEmail("");
+    setPhone("");
+    setDescription("");
+
+    toast.success(`Pesan berhasil dikirim.`);
+  };
+
   return (
     <UserLayout>
+      <Toaster position="top-right" reverseOrder={false} />
       <div className="min-h-screen flex items-center justify-center my-10 md:my-0">
         <div className="container mx-auto px-4 md:px-10">
           <h1 className="text-3xl font-bold text-center mb-4">Contact Us!</h1>
@@ -15,7 +42,10 @@ const ContactUs = () => {
             attention to inquiries.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <form className="bg-white shadow-md rounded-lg p-6">
+            <form
+              className="bg-white shadow-md rounded-lg p-6"
+              onSubmit={handleSubmit}
+            >
               <div className="mb-4">
                 <label
                   htmlFor="name"
@@ -26,7 +56,9 @@ const ContactUs = () => {
                 <input
                   type="text"
                   id="name"
-                  className="mt-1 block w-full p-2 border rounded-md "
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="mt-1 block w-full p-2 border rounded-md"
                   placeholder="Name"
                   required
                 />
@@ -41,7 +73,9 @@ const ContactUs = () => {
                 <input
                   type="email"
                   id="email"
-                  className="mt-1 block w-full p-2 border rounded-md "
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="mt-1 block w-full p-2 border rounded-md"
                   placeholder="Email"
                   required
                 />
@@ -56,7 +90,9 @@ const ContactUs = () => {
                 <input
                   type="text"
                   id="phone"
-                  className="mt-1 block w-full p-2 border rounded-md "
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="mt-1 block w-full p-2 border rounded-md"
                   placeholder="Phone"
                   required
                 />
@@ -71,7 +107,9 @@ const ContactUs = () => {
                 <textarea
                   id="description"
                   rows="4"
-                  className="mt-1 block w-full p-2 border rounded-md "
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  className="mt-1 block w-full p-2 border rounded-md"
                   placeholder="Message"
                   required
                 ></textarea>
@@ -87,15 +125,21 @@ const ContactUs = () => {
             <div>
               <div className="bg-white shadow-md rounded-lg p-6 mb-6">
                 <div className="flex items-center mb-4">
-                  <span className="text-red-500 mr-3"><MdAddIcCall /></span>
+                  <span className="text-red-500 mr-3">
+                    <MdAddIcCall />
+                  </span>
                   <p>470-601-1911</p>
                 </div>
                 <div className="flex items-center mb-4">
-                  <span className="text-orange-500 mr-3"><FaMailBulk /></span>
+                  <span className="text-orange-500 mr-3">
+                    <FaMailBulk />
+                  </span>
                   <p>parfumeGue@gmail.com</p>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-red-500 mr-3"><GrLocationPin /></span>
+                  <span className="text-red-500 mr-3">
+                    <GrLocationPin />
+                  </span>
                   <p>Condet, Jakarta Timur, 13640</p>
                 </div>
               </div>

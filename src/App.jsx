@@ -10,6 +10,7 @@ import DetailOrder from "./admin/DetailOrder";
 import FinishedOrders from "./admin/FinishedOrders";
 import ContactUs from "./User/ContactUs";
 import AllProducts from "./admin/AllProducts";
+import UserMessages from "./admin/UserMessages";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/dashboard/Order-detail/:id" element={<DetailOrder />} />
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/allproducts" element={<AllProducts />} />
+      <Route path="/usermessage" element={<UserMessages />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
