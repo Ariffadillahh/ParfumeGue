@@ -69,9 +69,9 @@ const Navbar = () => {
             </span>
           )}
         </Link>
-        {/* <Link to="/login" className="flex items-center hover:text-black">
+        <Link to="/login" className="flex items-center hover:text-black">
           <BiLogInCircle className="h-6 w-6" />
-        </Link> */}
+        </Link>
       </div>
 
       <div className="flex md:hidden items-center">
@@ -121,7 +121,7 @@ const Navbar = () => {
               <MdOutlineContacts /> Contact Us
             </Link>
           </li>
-          {/* <li className="p-3">
+          <li className="p-3">
             <Link
               to="/login"
               className="flex gap-2 items-center hover:underline transition-transform duration-200 ease-in-out hover:-translate-y-1"
@@ -129,7 +129,7 @@ const Navbar = () => {
             >
               <BiLogInCircle /> Login
             </Link>
-          </li> */}
+          </li>
         </ul>
       </div>
     </nav>
