@@ -15,7 +15,7 @@ const Swiper = () => {
     {
       id: 1,
       img: Img1,
-      title: "New Product",
+      title: "Best Product",
       title2: "Chanel No. 5",
       description:
         "Explore a selection of new and best perfumes that exude elegance and allure. Discover good fragrances crafted to enchant and captivate, perfect for any occasion",
@@ -24,7 +24,7 @@ const Swiper = () => {
     {
       id: 2,
       img: Img2,
-      title: "New Product",
+      title: "Best Product",
       title2: "Yves Saint Laurent Libre",
       description:
         "Indulge in new and best attars that offer a rich and lasting aroma. Experience good fragrances that evoke tradition and sophistication, ideal for those seeking a unique olfactory journey.",
@@ -33,7 +33,7 @@ const Swiper = () => {
     {
       id: 3,
       img: Img3,
-      title: "New Product",
+      title: "Best Product",
       title2: "Gucci Bloom",
       description:
         "Discover the allure of new and best oud perfumes, known for their deep, woody scents. Experience good fragrances that embody luxury and timelessness, perfect for those who appreciate the finer things in life.",

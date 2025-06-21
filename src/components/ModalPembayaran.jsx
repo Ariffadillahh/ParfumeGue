@@ -49,6 +49,7 @@ const ModalPembayaran = ({ totalPrice, openModal, setOpenModal }) => {
                 <a
                   href="https://wa.me/+6281293772795"
                   className="underline text-blue-700 mx-1"
+                  target="_blank"
                 >
                   klik di sini
                 </a>

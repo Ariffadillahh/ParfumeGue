@@ -10,7 +10,7 @@ const Breadcrumb = ({ title }) => {
         <li className="inline-flex items-center ">
           <Link
             to={"/dashboard"}
-            className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 gap-2"
+            className="inline-flex items-center text-sm font-medium text-blue-600 gap-2"
           >
             <MdDashboard size={20} />
             Dashboard

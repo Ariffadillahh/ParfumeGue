@@ -76,16 +76,7 @@ const DetailParfume = () => {
           </div>
           <div className="flex flex-col justify-center  px-5">
             <h1 className="text-3xl font-bold">{parfume.name}</h1>
-            <div className="flex justify-between items-center my-3">
-              <p className="text-xl font-light">{parfume.brand}</p>
-              <p>
-                {parfume.inStock ? (
-                  <FaCheck className="text-green-500" />
-                ) : (
-                  <RxCross2 className="text-red-500" />
-                )}
-              </p>
-            </div>
+            <p className="text-xl font-light my-3">{parfume.brand}</p>
             <p className="text-2xl font-semibold mb-3">${parfume.price}</p>
             <p className="text-base mb-4">{parfume.description}</p>
             <div className="flex items-center space-x-1">

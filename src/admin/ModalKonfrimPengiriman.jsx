@@ -78,7 +78,7 @@ const ModalKonfrimPengiriman = ({
                   1
                 )}?text=Halo, ${
                   detailOrder.name
-                }. Pesanan Anda akan segera kami kirim ke alamat ${
+                }. Pesanan Anda akan kami kirim ke alamat ${
                   detailOrder.address
                 }. Terima kasih telah berbelanja di toko kami.`}
                 target="_blank"

@@ -6,6 +6,7 @@ import { BsBox2 } from "react-icons/bs";
 import { Toaster } from "react-hot-toast";
 import LayoutAdmin from "./LayoutAdmin";
 import Breadcrumb from "../components/Breadcrumb";
+import { FaWhatsapp } from "react-icons/fa";
 
 const DetailOrder = () => {
   const { id } = useParams();
@@ -48,7 +49,7 @@ const DetailOrder = () => {
   return (
     <LayoutAdmin>
       <div>
-        <Breadcrumb title={detailOrder.name}/>
+        <Breadcrumb title={detailOrder.name} />
         <Toaster position="top-right" reverseOrder={false} />
         <div className="md:mx-10 mx-3 my-10">
           <div className="container mx-auto mt-10">
@@ -139,6 +140,20 @@ const DetailOrder = () => {
                             <BsBox2 className="animate-bounce" />
                           </span>
                         </button>
+                        <a
+                          href={`https://wa.me/+62${detailOrder.phone.substring(
+                            1
+                          )}?text=Halo, ${
+                            detailOrder.name
+                          }. Pesanan Anda akan kami kirim ke alamat ${
+                            detailOrder.address
+                          }. Terima kasih telah berbelanja di toko kami.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className=" hover:underline border border-green-500 py-1.5 px-3 rounded"
+                        >
+                          <FaWhatsapp className="text-green-500 text-2xl" />
+                        </a>
                       </>
                     )}
                   </div>
