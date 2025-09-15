@@ -16,7 +16,7 @@ const ModalPembayaran = ({ totalPrice, openModal, setOpenModal }) => {
         className={
           !openModal
             ? "hidden"
-            : "fixed  top-0 left-0 right-0 z-50 bg-black/70 overflow-hidden h-full flex items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+            : "fixed top-0 left-0 right-0 z-[99] bg-black/70 overflow-hidden h-full flex items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
         }
       >
         <div className="relative p-4 w-full max-w-2xl max-h-full">

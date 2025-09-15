@@ -45,3 +45,6 @@ Clone repositori ke lokal Anda:
 ## ✨ Terima Kasih!
 Website ParfumeGue ini dibuat untuk memenuhi tugas CSC dan diharapkan dapat menjadi inspirasi dalam pengembangan aplikasi web modern. Happy coding!
 
+## Live Aplication 
+https://parfume-gue.vercel.app/
+
